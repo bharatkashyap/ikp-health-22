@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>GraphQL in GovTech</title>
+
+		<link rel="stylesheet" href="reveal.js/dist/reset.css">
+		<link rel="stylesheet" href="reveal.js/dist/reveal.css">
+		<link rel="stylesheet" href="reveal.js/dist/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="reveal.js/plugin/highlight/monokai.css" id="highlight-theme">
+		<!-- Icons -->
+		<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@500&family=Lato&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-iframe="https://graphql.asia/talks/adding-bleeding-edge-tech-to-archaic-government-graphql-for-govtech/" data-background-interactive>
+					<div style="position: absolute; width: 60%; right: 0%; margin-top: 5%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-family: 'Lato'; text-align: left;">
+						<p style="font-size: 3rem"><span style="font-family: 'Darker Grotesque'">GraphQL</span> for <span style="font-family: 'CMU Serif'">GovTech</span></p>
+						<p style="font-size: 1rem"> Bharat Kashyap | ⚡ Lightning Talk</p>
+						<p style="font-size: 0.8rem">February 2021</p>
+					</div>
+				</section>
+				<section data-background-image="/ode-bg.png" data-background-size="cover" data-background-opacity="0.5" data-background-position="top" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div style="position: absolute; left: 0%; right: 0; margin: 0 auto; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-family: 'Lato'; text-align: center;">
+						<p style="font-size: 3rem">🏛️ <span style="font-family: 'Darker Grotesque'">GovTech?</span></p>
+						<div class="r-hstack justify-center">
+							<div data-id="box1" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>														
+							<div data-id="box2" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+							<div data-id="box3" style="background: #999; width: 50px; height: 50px; margin: 10px; border-radius: 5px;"></div>
+						</div>
+					</div>
+				</section>	
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0" style="background: #999999; width: 150px; height: 30px; margin: 10px;"></div>						
+						<div data-id="box2" data-auto-animate-delay="0.1" style="background: #39535c; width: 150px; height: 50px; margin: 10px;"></div>
+						<div data-id="box3" data-auto-animate-delay="0.2" style="background: #82413c; width: 150px; height: 100px; margin: 10px;"></div>
+					</div>
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 5rem">Evolution</span></p>
+				</section>	
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">						
+						<div data-id="box1" style="background: #999999; width: 20px; height: 20px; border-radius: 100px; position: relative; left: 92.5px; top: -30px;"></div>																								
+						<div data-id="box2" data-auto-animate-delay="0" style="background: #39535c; width: 150px; height: 50px; margin: 10px"></div>
+						<div data-id="box3" data-auto-animate-delay="0" style="background: #82413c; width: 150px; height: 100px; margin-top: -180px; margin-left: -160px"></div>
+					</div>
+
+					<p style="font-family: 'Darker Grotesque'; display: flex; flex-direction: column;">
+						<span style="font-size: 1rem; margin-left: 1.8rem">(80s - 90s)</span>
+						<span style="font-size: 5rem">Computerisation</span>
+					</p>
+					<p class="fragment" style="font-size: 2rem; margin-top: 2em">
+						<i class="lni lni-clipboard"></i>
+						<i style="color: #39535c; font-size: 0.8em" class="lni lni-arrow-right"></i>
+						<i class="lni lni-remove-file"></i>
+					</p>
+				</section>		
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">	
+						<div data-id="box1" data-auto-animate-delay="0" style="background: #999999; width: 30px; height: 150px; margin: 10px;"></div>																	
+						<div data-id="box2" data-auto-animate-delay="0" style="background: #39535c; width: 10px; height: 180px; transform: rotate(15deg); position: relative; left: 35px;"></div>
+						<div data-id="box3" data-auto-animate-delay="0" style="background: #82413c; width: 150px; height: 150px; border-radius: 100px; margin: 10px; position: relative; left: 50px;"></div>
+					</div>
+					<p style="font-family: 'Darker Grotesque'; display: flex; flex-direction: column;">
+						<span style="font-size: 1rem; margin-left: 1rem">(90 - 00s)</span>
+						<span style="font-size: 5rem">Digitisation</span>
+					</p>	
+					<p class="fragment" style="font-size: 2rem; margin-top: 2em">
+						<i style="color: #39535c; margin-right: 1em" class="lni lni-world"></i>	
+						<i style="color: #888" class="lni lni-remove-file"></i>										
+						<i style="color: #39535c; margin-left: 1em" class="lni lni-upload"></i>
+					</p>
+				</section>	
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">	
+						<div data-id="box1" data-auto-animate-delay="0" style="background: #999999; width: 150px; height: 30px; margin: 10px;"></div>											
+						
+						<span class="fragment fade-in-then-out" data-fragment-index="1" style="color: #82413c; font-family: 'Lato'; font-size: 1rem; position: absolute; top: -6%; text-transform: uppercase;">Govt. owned</span>	
+						<span class="fragment fade-in-then-out" data-fragment-index="2" style="color: #82413c; font-family: 'Lato'; font-size: 1rem; position: absolute; top: -6%; text-transform: uppercase;">Modular</span>										
+						<div data-id="box3" style="background: #82413c; width: 150px; height: 30px; border-radius: 200px; font-family: 'Lato'"></div>
+						<span class="fragment fade-in-then-out" data-fragment-index="1" style="color: #82413c; font-family: 'Lato'; font-size: 1rem; position: absolute; top: 12%; text-transform: uppercase;">Transparent</span>	
+						<span class="fragment fade-in-then-out" data-fragment-index="2" style="color: #82413c; font-family: 'Lato'; font-size: 1rem; position: absolute; top: 12%; text-transform: uppercase;">Interoperable</span>	
+
+						<div data-id="box2" data-auto-animate-delay="0.1" style="background: #39535c; width: 150px; height: 30px; margin: 10px;"></div>
+						
+						<div data-id="box-1-l-a" data-auto-animate-delay="0.5" style="background: #999999; width: 15px; height: 60px; transform: rotate(-50deg); position: absolute; left: 250px; top: -30px"></div>									
+						
+						<div data-id="box-1-l-b" data-auto-animate-delay="0.5" style="background: #999999; width: 60px; height: 15px; position: absolute; left: 180px; top: -25px;"></div>	
+						<img style="color: #999999; filter: contrast(0) brightness(3); font-size: 2.5rem; position: absolute; left: 145px; top: -60px;" data-fragment-index="1" class="fragment fade-in" height="50px" width="50px" src="331px-Emblem_of_India.svg.png"></i>	
+
+						<div data-id="box-1-r-a" data-auto-animate-delay="0.5" style="background: #999999; width: 15px; height: 70px; transform: rotate(50deg); position: absolute; left: 280px; top: 5px"></div>	
+
+						<div data-id="box-1-r-b" data-auto-animate-delay="0.5" style="background: #999999; width: 60px; height: 15px; position: absolute; left: 205px; top: 55px;"></div>	
+						<i style="color: #999999; font-size: 2.5rem; margin-right: 1em; position: absolute; left: 165px; top: 50px" data-fragment-index="1" class="fragment fade-in lni lni-comments"></i>
+
+						<div data-id="box-2-l-a" data-auto-animate-delay="0.5" style="background: #39535c; width: 15px; height: 60px; transform: rotate(50deg); position: absolute; right: 250px; top: -30px"></div>		
+						<div data-id="box-2-l-b" data-auto-animate-delay="0.5" style="background: #39535c; width: 60px; height: 15px; position: absolute; right: 180px; top: -25px;"></div>	
+						<i style="color: #39535c; font-size: 2.5rem; margin-right: 1em; position: absolute; right: 100px; top: -35px" data-fragment-index="2" class="fragment fade-in lni lni-code-alt"></i>
+						
+						
+						<div data-id="box-2-r-a" data-auto-animate-delay="0.5" style="background: #39535c; width: 15px; height: 70px; transform: rotate(-50deg); position: absolute; right: 280px; top: 5px"></div>		
+						<div data-id="box-2-r-b" data-auto-animate-delay="0.5" style="background: #39535c; width: 60px; height: 15px; position: absolute; right: 205px; top: 55px;"></div>
+						<i style="color: #39535c; font-size: 2.5rem; margin-right: 1em; position: absolute; right: 130px; top: 45px" data-fragment-index="2" class="fragment fade-in lni lni-road"></i>	
+
+					</div>
+					<p style="font-family: 'Darker Grotesque'; margin-top: 4rem; display: flex; flex-direction: column;">
+						<span style="font-size: 1rem; margin-left: 1rem">(10s - now)</span>
+						<span style="font-size: 5rem"><span data-fragment-index="1" class="fragment highlight-current-blue">Public</span> <span data-fragment-index="2" class="fragment highlight-current-blue">Digital Infrastructure</span></p>
+					<p data-fragment-index="3" class="fragment fade-in-then-out" style="font-size: 2rem; margin-top: 2em">	
+						<i style="color: #39535c; margin-right: 1em" data-id="world" class="lni lni-world"></i>	
+						<i style="color: #888" data-id="file" class="lni lni-remove-file"></i>										
+						<i style="color: #39535c; margin-left: 1em" data-id="upload" class="lni lni-upload"></i>	
+					</p>	
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center" style="position: relative; top: 300px; margin-bottom: 1.5rem">	
+						<div data-id="box1" data-auto-animate-delay="0" style="background: #999999; width: 240px; height: 10px; margin: 10px; margin-right: 0;"></div>																
+						<div data-id="box2" data-auto-animate-delay="0.1" style="background: #39535c; width: 240px; height: 10px; margin: 10px; margin-left: 0;"></div>													
+					</div>
+					<p style="font-family: 'Darker Grotesque'; margin-top: 0rem; display: flex; flex-direction: column;">
+						<span style="font-size: 1rem; margin-left: 1rem; opacity: 0.5;">(10s - now)</span>
+						<span style="font-size: 5rem"><span style="opacity: 0.5">Public</span> <span style="opacity: 0.5">Digital Infrastructure</span></p>
+					<p data-id="icon-box" class="" style="font-size: 2rem; margin-top: 2em">
+							<i style="color: #39535c; margin-right: 1em" data-auto-animate-delay="0.1" data-id="world" class="lni lni-world"></i>	
+							<i style="color: #82413cff; margin-right: 1em" data-auto-animate-delay="0.1" class="lni lni-mobile"></i>
+							<i style="color: #82413c; margin-right: 1em" data-auto-animate-delay="0.1" class="lni lni-link"></i>
+							<i style="color: #888" data-id="file"  data-auto-animate-delay="0.1" class="lni lni-remove-file"></i>			
+							<i style="color: #82413c; margin-left: 1em" data-auto-animate-delay="0.1" class="lni lni-stamp"></i>	
+							<i style="color: #82413c; margin-left: 1em" data-auto-animate-delay="0.1" class="lni lni-rupee"></i>						
+							<i style="color: #39535c; margin-left: 1em" data-auto-animate-delay="0.1" data-id="upload" class="lni lni-upload"></i>
+					</p>
+					<p class="" style="font-size: 2rem; margin-top: 3em">						
+							<img src="Aadhar-Black.svg" style="height: 40px; width: 150px; filter: invert() opacity(0.5); margin: 0; padding: 0" class="fragment" data-fragment-index="1"/>
+							<img src="UPI-Logo-vector.svg" style="height: 40px; width: 150px; filter: grayscale(); margin: 0; padding: 0" class="fragment" data-fragment-index="1"/>	
+							<img src="digiLocker-Small.png" style="width: 100px; filter: grayscale(); margin: 0; padding: 0; margin-left: 1rem" class="fragment" data-fragment-index="1"/>					
+						</p>																				
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">	
+					<div class="r-hstack justify-center">						
+						<div data-id="box1" style="background: #39535c; width: 30px; height: 150px; margin: 10px; margin-left: 80px"></div>						
+						<div data-id="box2" style="background: #39535c; width: 150px; height: 30px; margin: 10px; margin-left: -100px"></div>										
+					</div>
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 5rem">Ecosystem</span></p>
+					<p class="" style="font-size: 2rem; margin-top: 2em">	
+						<img src="logo.png" style="height: 40px; width: 150px; filter: grayscale() opacity(0.9); margin: 0; padding: 0; margin-right: 1.5rem"/>								
+						<img src="samagra.png" style="height: 40px; width: 150px; filter: grayscale() opacity(0.9); margin: 0; padding: 0; margin-right: 1.5rem"/>
+						<img src="logo.svg" style="height: 40px; width: 150px; filter: grayscale(); margin: 0; padding: 0; margin-right: 1.5rem"/>	
+						<img src="Logo-2.png" style="width: 100px; filter: grayscale(); margin: 0; padding: 0; margin-left: 1rem"/>					
+					</p>				
+				</section>	
+				<section data-background-opacity=0.5 data-background-image="./in.svg" data-background-position="-120px 20px" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">							
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 6rem; background: #2b54bf; color: #ccc">Case Studies</span></p>	
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 2rem; background: #82413c">GraphQL in Government</span></p>				
+				</section>						
+				<section data-background-opacity=0.5 data-background-image="./himachal.svg" data-background-position="-120px 20px" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">							<p style="font-family: 'Darker Grotesque"><span style="font-size: 6rem; background: #2b54bf; color: #ccc">e-Samwad</span></p>	
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 2rem; background: #82413c">Digital public goods for school education</span></p>		
+				</section>
+				<section data-background-opacity=0.5 data-background-image="./himachal.svg" data-background-position="-120px 20px" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">							<p style="font-family: 'Darker Grotesque"><span style="font-size: 6rem; background: #333; color: #ccc">e-Samwad</span></p>	
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 2rem; background: #333">Digital public goods for school education</span></p>	
+					<div class="r-hstack" style="font-family: 'Darker Grotesque'; font-size: 1.5rem; display: flex; flex-grow: 1">
+						<p class="fragment fade-in-then-semi-out" style="background: #82413c;">No unified student database
+						</p>	
+						<p class="fragment fade-in-then-semi-out" style="background: #82413c">Remote region: Student-teacher communication fraught
+						</p>
+						<p class="fragment fade-in-then-semi-out" style="background: #82413c">No systems for student progress monitoring
+						</p>	
+					</div>
+				</section>
+				<section data-background-opacity=0.2 data-background-image="./himachal.svg" data-background-position="-120px 20px" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">							<p style="font-family: 'Darker Grotesque"><span style="font-size: 4rem; background: #333; color: #ccc">e-Samwad</span></p>	
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 1.5rem; background: #333">Digital public goods for school education</span></p>	
+					<div class="r-hstack" style="font-family: 'Darker Grotesque'; font-size: 1.5rem">						
+						<div class="fragment fade-out" style="display: flex; flex-direction: column; margin-left: -50px">
+							<video src="eSamwadApp.mp4" width="900px" style="margin: 0; padding: 0" muted data-autoplay></video>
+							<p style="background: #2B54BF">				
+								Mobile App: Student-Parent interface							
+							</p>	
+							<img src="apollo.png" style="width: 80px; position: relative; left: 120px; display: block; filter: invert(); margin: 0; padding: 0; margin-right: 1.5rem"/>
+						</div>
+						<div class="fragment fade-in-then-out" style="display: flex; flex-direction: column; ">
+							<video src="eSamwadDB.mov" width="900px" style="margin: 0; padding: 0" data-autoplay></video>
+							<p style="background: #2B54BF; margin-left: -10px">				
+								Unified student database							
+							</p>	
+							<img src="postgres.svg" style="width: 150px; position: relative; left: 80px; display: block; filter: grayscale(); margin: 0; padding: 0; margin-right: 1.5rem"/>
+						</div>	
+						<div class="fragment fade-in-then-out" style="display: flex; flex-direction: column;">
+							<video src="samarthConsole.mov" width="900px" style="margin: 0; padding: 0" data-autoplay></video>
+							<p style="background: #2B54BF; margin-left: -10px">				
+								Learning progress monitoring systems							
+							</p>
+							<div style="display: flex; flex-direction: row; margin-left: -50px">
+								<img src="hasura.png" style="width: 50px; position: relative; left: 150px; display: block; filter: invert(); margin: 0; padding: 0; margin-right: 1.5rem"/>
+								<img src="ra.svg" style="width: 50px; position: relative; left: 150px; display: block; filter: grayscale(); margin: 0; padding: 0; margin-right: 1.5rem"/>
+							</div>	
+						</div>									
+						</p>	
+					</div>
+				</section>
+				<section data-background-opacity=0.2 data-background-image="./haryana.svg" 
+				data-background-position="-120px 20px" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">						<p style="font-family: 'Darker Grotesque"><span style="font-size: 6rem; background: #2b54bf; color: #ccc">Saksham Samiksha</span></p>	
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 2rem; background: #82413c">Digital public goods for school education</span></p>
+				</section>
+				<section data-background-opacity=0.2 data-background-video="sakshamConsole.mov" 
+				data-background-video-muted data-background-position="-120px 20px" data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">						<p style="font-family: 'Darker Grotesque"><span style="font-size: 6rem; background: #333; color: #ccc">Saksham Samiksha</span></p>	
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 2rem; background: #333">Digital public goods for school education</span></p>
+					<div class="fragment fade-out" style="display: flex; flex-direction: row; justify-content: center; align-items: center; margin-left: 100px">						
+						<img src="apollo.png" style="width: 80px; display: block; filter: margin: 0; padding: 0;"/>
+						<img src="postgres.svg" style="width: 180px; display: block; margin: 0; padding: 0;"/>
+						<img src="hasura.png" style="width: 80px; display: block; filter: margin: 0; padding: 0; margin-right: 3rem;"/>
+						<img src="ra.svg" style="width: 100px; display: block; margin: 0; padding: 0;"/>
+					</div>					
+				</section>
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<div data-id="box1" data-auto-animate-delay="0" style="background: #39535c; width: 150px; height: 30px; margin: 10px;"></div>						
+						<div data-id="box2" data-auto-animate-delay="0.1" style="background: #39535c; width: 30px; height: 100px; margin: 10px; margin-left: -100px;"></div>
+						<div data-id="box3" data-auto-animate-delay="0.2" style="background: #82413c; width: 150px; height: 30px; margin-left: 80px;"></div>
+					</div>
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 5rem">Learnings</span></p>
+					<p style="font-family: 'Lato'; color: #ccc;"><span style="font-size: 2rem">Deploying GraphQL inside the greatest <em>enterprise</em> of them all</span></p>
+				</section>	
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center">
+						<!-- <div data-id="box1" data-auto-animate-delay="0" style="background: #39535c; width: 150px; height: 30px; margin: 10px;"></div>						
+						<div data-id="box2" data-auto-animate-delay="0.1" style="background: #39535c; width: 30px; height: 100px; margin: 10px; margin-left: -100px;"></div> -->
+						<div data-id="box3" data-auto-animate-delay="0.1" style="background: #82413c; width: 150px; height: 30px; margin-left: 10px;"></div>
+					</div>
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 5rem; color: #DD4B3955;">Challenges</span></p>
+					<div class="r-hstack">
+						<p class="fragment fade-in-then-semi-out" data-fragment-index="1"  style="text-transform: uppercase; font-family: 'Darker Grotesque'; color: #ccc; margin-right: 2rem">
+							<i class="lni lni-direction-alt" style="font-size: 3rem; color: #82413c"></i><span style="font-size: 1.5rem; font-weight: 500;">Migration</span></p>								
+						</p>
+						<p class="fragment fade-in-then-semi-out" style="text-transform: uppercase; font-family: 'Darker Grotesque'; color: #ccc;">
+							<i class="lni lni-construction" style="font-size: 3rem; margin-right: 1rem; color: #82413c"></i><span style="font-size: 1.5rem; font-weight: 500;">Community</span></p>	
+						</p>
+					</div>
+				</section>	
+				<section data-auto-animate data-auto-animate-easing="cubic-bezier(0.770, 0.000, 0.175, 1.000)">
+					<div class="r-hstack justify-center" style="margin-left: -80px;">
+						<div data-id="box1" data-auto-animate-delay="0" style="background: #39535c; width: 150px; height: 30px; margin: 10px;"></div>						
+						<div data-id="box2" data-auto-animate-delay="0.1" style="background: #39535c; width: 30px; height: 100px; margin: 10px; margin-left: -100px;"></div> 					
+					</div>
+					<p style="font-family: 'Darker Grotesque"><span style="font-size: 5rem; color: #39535c;">Benefits</span></p>
+					<div class="r-hstack">
+						<p class="fragment fade-in-then-semi-out" data-fragment-index="1"  style="text-transform: uppercase; font-family: 'Darker Grotesque'; color: #ccc; margin-right: 2rem">
+							<i class="lni lni-dashboard" style="font-size: 3rem; margin-right: 1rem; color:  #39535c"></i><span style="font-size: 1.5rem; font-weight: 500;">Fast</span></p>						
+						</p>
+						<p class="fragment fade-in-then-semi-out" style="text-transform: uppercase; font-family: 'Darker Grotesque'; color: #ccc; margin-right: 1rem;">
+							<i class="lni lni-bricks" style="font-size: 3rem; margin-right: 1rem; color:  #39535c"></i><span style="font-size: 1.5rem; font-weight: 500;">Configurable</span></p>	
+						</p>
+						<p class="fragment fade-in-then-semi-out" style="text-transform: uppercase; font-family: 'Darker Grotesque'; color: #ccc;">
+							<i class="lni lni-graph" style="font-size: 3rem; margin-right: 1rem; color:  #39535c"></i><span style="font-size: 1.5rem; font-weight: 500;">Scalable</span></p>	
+						</p>
+					</div>
+				</section>																
+				<section data-background-iframe="https://samagra-development.github.io/docs/docs/ComponentsOverview/">
+					<div style="position: absolute; width: 60%; right: 0%; margin-top: 5%; box-shadow: 0 1px 4px rgba(0,0,0,0.5), 0 5px 25px rgba(0,0,0,0.2); background-color: rgba(0, 0, 0, 0.9); color: #fff; padding: 20px; font-family: 'Lato'; text-align: left;">
+						<p style="font-size: 3rem"><span style="font-family: 'Darker Grotesque'">GraphQL</span> for <span style="font-family: 'CMU Serif'">GovTech</span></p>
+						<p style="font-size: 1rem"> Bharat Kashyap | ⚡ Lightning Talk</p>
+						<p style="font-size: 1rem"><i class="lni lni-github"></i> <a href="https://github.com/Samagra-Development" target="_blank"> Samagra</a></p>
+						<p style="font-size: 0.8rem">February 2021</p>
+					</div>
+				</section>																							
+			</div>
+		</div>
+
+		<script src="reveal.js/dist/reveal.js"></script>
+		<script src="reveal.js/plugin/notes/notes.js"></script>
+		<script src="reveal.js/plugin/markdown/markdown.js"></script>
+		<script src="reveal.js/plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
